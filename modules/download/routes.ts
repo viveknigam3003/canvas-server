@@ -99,6 +99,10 @@ const exportArtboard = async (artboard: Artboard): Promise<string> => {
   });
 };
 
+router.get("/", (req, res) => {
+  console.log("GET /api/download");
+});
+
 router.post("/", async (req, res) => {
   const { artboards, origin } = req.body;
   // const artboard: Artboard = artboards[0];
